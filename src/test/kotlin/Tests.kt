@@ -51,6 +51,18 @@ class Tests {
     assertEquals(811, Day04.p2(readFile("04/input.txt")))
   }
 
+  @Test
+  fun `day05, part 1`() {
+    assertEquals("CMZ", Day05.p1(readFile("05/sample.txt")))
+    assertEquals("QGTHFZBHV", Day05.p1(readFile("05/input.txt")))
+  }
+
+  @Test
+  fun `day05, part 2`() {
+    assertEquals("MCD", Day05.p2(readFile("05/sample.txt")))
+    assertEquals("MGDMPSZTM", Day05.p2(readFile("05/input.txt")))
+  }
+
   private fun readFile(path: String): String {
     return javaClass.getResource(path)!!.readText()
   }
