@@ -63,6 +63,25 @@ class Tests {
     assertEquals("MGDMPSZTM", Day05.p2(readFile("05/input.txt")))
   }
 
+  @Test
+  fun `day06, part 1`() {
+    assertEquals(5, Day06.p1("bvwbjplbgvbhsrlpgdmjqwftvncz"))
+    assertEquals(6, Day06.p1("nppdvjthqldpwncqszvftbrmjlhg"))
+    assertEquals(10, Day06.p1("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg"))
+    assertEquals(11, Day06.p1("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw"))
+    assertEquals(1896, Day06.p1(readFile("06/input.txt")))
+  }
+
+  @Test
+  fun `day06, part 2`() {
+    assertEquals(19, Day06.p2("mjqjpqmgbljsphdztnvjfqwrcgsmlb"))
+    assertEquals(23, Day06.p2("bvwbjplbgvbhsrlpgdmjqwftvncz"))
+    assertEquals(23, Day06.p2("nppdvjthqldpwncqszvftbrmjlhg"))
+    assertEquals(29, Day06.p2("nznrnfrfntjfmvfwmzdfjlvtqnbhcprsg"))
+    assertEquals(26, Day06.p2("zcfzfwzzqfrljwzlrfnpqdbhtmscgvjw"))
+    assertEquals(3452, Day06.p2(readFile("06/input.txt")))
+  }
+
   private fun readFile(path: String): String {
     return javaClass.getResource(path)!!.readText()
   }
