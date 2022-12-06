@@ -39,9 +39,9 @@ object Day04 {
     }
 
     fun overlaps(other: Range): Boolean {
-      return covers(other)
-          || (this.from <= other.from && this.to >= other.from)
-          || (this.from <= other.to && this.to >= other.to)
+      return covers(other) ||
+        (this.from <= other.from && this.to >= other.from) ||
+        (this.from <= other.to && this.to >= other.to)
     }
 
     companion object {

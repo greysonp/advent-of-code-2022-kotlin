@@ -10,7 +10,7 @@ object Day06 {
   private fun findPacketIndex(input: String, markerLength: Int): Int {
     for (i in 0 until input.length - markerLength) {
       val chunk = input.substring(i, i + markerLength)
-      if (chunk.toCharArray().toSet().size  == markerLength) {
+      if (chunk.toCharArray().toSet().size == markerLength) {
         return i + markerLength
       }
     }

@@ -4,7 +4,7 @@ object Day03 {
       .lines()
       .filter { it.isNotEmpty() }
       .map { line ->
-        val midpoint = line.length /2
+        val midpoint = line.length / 2
 
         val p1: Set<Char> = line.substring(0, midpoint).toCharArray().toSet()
         val p2: Set<Char> = line.substring(midpoint).toCharArray().toSet()
