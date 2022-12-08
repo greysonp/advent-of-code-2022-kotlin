@@ -94,6 +94,18 @@ class Tests {
     assertEquals(4443914, Day07.p2(readFile("07/input.txt")))
   }
 
+  @Test
+  fun `day08, part 1`() {
+    assertEquals(21, Day08.p1(readFile("08/sample.txt")))
+    assertEquals(1546, Day08.p1(readFile("08/input.txt")))
+  }
+
+  @Test
+  fun `day08, part 2`() {
+    assertEquals(8, Day08.p2(readFile("08/sample.txt")))
+    assertEquals(519064, Day08.p2(readFile("08/input.txt")))
+  }
+
   private fun readFile(path: String): String {
     return javaClass.getResource(path)!!.readText()
   }
