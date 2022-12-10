@@ -118,6 +118,36 @@ class Tests {
     assertEquals(2467, Day09.p2(readFile("09/input.txt")))
   }
 
+  @Test
+  fun `day10, part 1`() {
+    assertEquals(13140, Day10.p1(readFile("10/sample.txt")))
+    assertEquals(16020, Day10.p1(readFile("10/input.txt")))
+  }
+
+  @Test
+  fun `day10, part 2`() {
+    val sampleAnswer = """
+      ##..##..##..##..##..##..##..##..##..##..
+      ###...###...###...###...###...###...###.
+      ####....####....####....####....####....
+      #####.....#####.....#####.....#####.....
+      ######......######......######......####
+      #######.......#######.......#######.....
+    """.trimIndent()
+
+    val inputAnswer = """
+      ####..##..####.#..#.####..##..#....###..
+      #....#..#....#.#..#....#.#..#.#....#..#.
+      ###..#......#..#..#...#..#..#.#....#..#.
+      #....#.....#...#..#..#...####.#....###..
+      #....#..#.#....#..#.#....#..#.#....#.#..
+      ####..##..####..##..####.#..#.####.#..#.
+    """.trimIndent()
+
+    assertEquals(sampleAnswer, Day10.p2(readFile("10/sample.txt")))
+    assertEquals(inputAnswer, Day10.p2(readFile("10/input.txt")))
+  }
+
   private fun readFile(path: String): String {
     return javaClass.getResource(path)!!.readText()
   }
